@@ -57,11 +57,12 @@ Here is the Entity-Relationship Diagram for the database schema.
 The project is organized into logical files for clarity and ease of evaluation:
 
 -   `README.md`: This file, providing a high-level overview of the project.
--   `schema.sql`: Contains all `CREATE TABLE` statements for building the database structure.
--   `data.sql`: Contains all `INSERT INTO` statements for populating the database with sample data.
--   `queries.sql`: Contains all 30 advanced SQL queries with problem statements.
--   `er_diagram.png`: The schema diagram image.
--   `pdf_Movie_Streaming_Platform_Project.pdf`: The complete project report in PDF format.
+-   `1_pdf_Movie_Streaming_Platform_Project.pdf`: The complete project report in PDF format.
+-   `2_schema.sql`: Contains all `CREATE TABLE` statements for building the database structure.
+-   `3_data.sql`: Contains all `INSERT INTO` statements for populating the database with sample data.
+-   `4_queries.sql`: Contains all 30 advanced SQL queries with problem statements.
+-   `5_er_diagram.png`: The schema diagram image.
+-   `6_docx_Movie_Streaming_Platform_Project.docx`: The complete project report in DOCX format.
 
 ---
 
