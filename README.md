@@ -16,12 +16,53 @@ The complete documentation for this project is available in the PDF file. This i
 -   Data Insertion Scripts
 -   All 30 Advanced SQL Queries with Screenshots of their Outputs
 
-### ➡️ [**Click here to view the Full Project Report (PDF)**](./pdf- Movie Streaming Platform Project.pdf)
+### ➡️ [Click here to view the Full Project Report (PDF)](./1_pdf_Movie_Streaming_Platform_Project.pdf)
 
 ---
 
-## 🧩 ER Diagram
+## 🧩 Database Schema Design and ER Diagram
 
+### Schema Philosophy
+
+The schema is logically divided into three core areas:
+1.  **User Management:** Tables like `users`, `profiles`, `plans`, and `subscriptions` manage user accounts and billing.
+2.  **Content Catalog:** `movies`, `genres`, and the `movie_genres` junction table manage the movie library and its metadata.
+3.  **User Interaction:** `watch_history`, `ratings`, `reviews`, and `playlists` track how users interact with the content on the platform.
+
+### Table Descriptions
+
+| Table             | Description                                                                 |
+| ----------------- | --------------------------------------------------------------------------- |
+| `users`           | Stores core user account credentials and status.                            |
+| `profiles`        | Manages individual user profiles under a single account.                    |
+| `plans`           | Defines the available subscription plans (e.g., Basic, Premium 4K).         |
+| `subscriptions`   | Tracks the relationship between a user and their chosen plan.               |
+| `movies`          | Contains all metadata for movies, such as title, duration, and release date.|
+| `genres`          | A lookup table for movie genres (e.g., Action, Romance).                    |
+| `movie_genres`    | Junction table for the many-to-many relationship between movies and genres. |
+| `watch_history`   | Logs the viewing activity for each profile.                                 |
+| `ratings`         | Stores the 1-5 star ratings given by a profile to a movie.                  |
+| `reviews`         | Stores detailed text reviews written by profiles for movies.                |
+| `playlists`       | Allows profiles to create named collections of movies.                      |
+| `playlist_movies` | Junction table linking playlists to the movies they contain.                |
+
+---
 Here is the Entity-Relationship Diagram for the database schema.
 
-![ER Diagram](./er_diagram.png)
+![ER Diagram](./5_er_diagram.png)
+
+
+## 📂 Repository Structure
+
+The project is organized into logical files for clarity and ease of evaluation:
+
+-   `README.md`: This file, providing a high-level overview of the project.
+-   `1_pdf_Movie_Streaming_Platform_Project.pdf`: The complete project report in PDF format.
+-   `2_schema.sql`: Contains all `CREATE TABLE` statements for building the database structure.
+-   `3_data.sql`: Contains all `INSERT INTO` statements for populating the database with sample data.
+-   `4_queries.sql`: Contains all 30 advanced SQL queries with problem statements.
+-   `5_er_diagram.png`: The schema diagram image.
+-   `6_docx_Movie_Streaming_Platform_Project.docx`: The complete project report in DOCX format.
+
+---
+
